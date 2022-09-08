@@ -1,0 +1,41 @@
+<!-- <ol class="list-group list-group-numbered">
+    <li   *ngFor="let u of students;  index as i" 
+    class="list-group-item"> {{u.firstName}}, {{u.lastName}},{{u.studentClass}},{{u.subject}},{{u.dob}}
+    <button type="button" (click)="deleteRow(u, i)" >Delete User</button>
+   
+  </li>
+  <button type="button" (click)="deleteRows(students)" >Delete Users</button>
+  </ol> -->
+
+  <div class="mt-5">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>StudentClass</th>
+          <th>subject</th>
+          <th>Dob</th>
+          <th>Delete</th>
+       
+        
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr *ngFor="let s of students; index as i">
+          <td>{{s.firstName}}</td>
+          <td>{{s.lastName}}</td>
+          <td>{{s.studentClass}}</td>
+          <td>{{s.subject}}</td>
+          <td>{{s.dob}}</td>
+
+          <button type="button" class="btn btn-info btn-lg "  (click)="deleteRow(s, i)" >Delete</button>
+<br>
+         
+          </tr>
+          <button type="button" class="btn btn-primary w-100"  (click)="deleteRows(students)" >Delete All</button>
+   
+      </tbody>
+    </table>
+  </div>
+

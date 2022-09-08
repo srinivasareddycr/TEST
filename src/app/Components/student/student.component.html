@@ -1,0 +1,34 @@
+
+          <div class="card mt-5" style="padding: 20px;">
+    <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+      <div class="form-group">
+        <label for="name">Student FirstName :</label>
+        <input type="text" #firstName (ngModel)="firstName" name="firstName" id="firstName" class="form-control" placeholder="Student Name">
+      </div>
+      <div class="form-group">
+        <label for="address">Student LastName:</label>
+        <input type="text" #lastName (ngModel)="lastName" name="lastName" id="lastName" class="form-control"
+          placeholder="lastName">
+      </div>
+      <div class="form-group">
+        <label for="percentage">Student Class :</label>
+        <input type="text" #studentClass (ngModel)="studentClass" name="studentClass" id="studentClass" class="form-control"
+          placeholder="studentClass">
+      </div>
+      <div class="form-group">
+        <label for="percentage">Student Subject :</label>
+        <input type="text" #subject (ngModel)="subject" name="subject" id="subject" class="form-control"
+        placeholder="subject">
+    </div>
+      <div class="form-group">
+        <label for="percentage">Student DOB :</label>
+        <input type="date" #dob (ngModel)="dob" name="dob" id="dob" class="form-control"
+          placeholder="dob">
+      </div>
+      <div class="form-group">
+        <input type="submit" value="SAVE" class="btn btn-primary w-100">
+      </div>
+    </form>
+
+</div>
+

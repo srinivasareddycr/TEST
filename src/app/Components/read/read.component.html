@@ -1,0 +1,33 @@
+
+  <div class="mt-5">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>FirstName</th>
+                  <th>LastName</th>
+                  <th>StudentClass</th>
+                  <th>subject</th>
+                  <th>Dob</th>
+               
+                
+                </tr>
+              </thead>
+              <tbody class="tbody">
+                <tr *ngFor="let s of students">
+                  <td>{{s.sId}}</td>
+                  <td>{{s.firstName}}</td>
+                  <td>{{s.lastName}}</td>
+                  <td>{{s.studentClass}}</td>
+                  <td>{{s.subject}}</td>
+                  <td>{{s.dob}}</td>
+
+                 
+                  </tr>
+                
+              </tbody>
+            </table>
+          </div>
+      
+        
+

@@ -1,0 +1,136 @@
+<!-- <div class="mt-4" style="padding: 50px;">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>StudentClass</th>
+        <th>subject</th>
+        <th>Dob</th>
+        <th>Edit</th>
+
+
+      </tr>
+    </thead>
+    <tbody class="tbody">
+      <tr *ngFor="let s of students">
+       
+        <td>{{s.sId}}</td>
+        <td>{{s.firstName}}</td>
+        <td>{{s.lastName}}</td>
+        <td>{{s.studentClass}}</td>
+        <td>{{s.subject}}</td>
+        <td>{{s.dob}}</td>
+
+
+        <td><button type="button" class="btn btn-info btn-lg" (click)="callAll(student)">Edit</button></td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+
+
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Update Student</h4>
+        <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span
+            aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <form #updateForm="ngForm" (ngSubmit)="updateStudent()">
+          <div class="form-group">
+            <label for="name">Student Id :</label>
+            <input type="text" #firstName [(ngModel)]="editStudent.sId" name="sId" id="sId"
+              class="form-control" placeholder="sId">
+          </div>
+          <div class="form-group">
+            <label for="name">Student FirstName :</label>
+            <input type="text" #firstName [(ngModel)]="editStudent.firstName" name="firstName" id="firstName"
+              class="form-control" placeholder="firstName">
+          </div>
+          <div class="form-group">
+            <label for="address">Student LastName:</label>
+            <input type="text" #lastName [(ngModel)]="editStudent.lastName" name="lastName" id="lastName"
+              class="form-control" placeholder="lastName">
+          </div>
+          <div class="form-group">
+            <label for="percentage">Student Class :</label>
+            <input type="text" #studentClass [(ngModel)]="editStudent.studentClass" name="studentClass"
+              id="studentClass" class="form-control" placeholder="studentClass">
+          </div>
+          <div class="form-group">
+            <label for="percentage">Student Subject :</label>
+            <input type="text" #subject [(ngModel)]="editStudent.subject" name="subject" id="subject"
+              class="form-control" placeholder="studentsubject">
+          </div>
+          <div class="form-group">
+            <label for="percentage">Student DOB :</label>
+            <input type="date" #dob [(ngModel)]="editStudent.dob" name="dob" id="dob" class="form-control"
+              placeholder="dob">
+          </div>
+          <div class="form-group">
+            
+            <input type="submit" value="UPDATE" class="btn btn-primary w-100">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="card shadow mb-5">
+  <!-- Card Header - Dropdown -->
+  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+      <h6 class="m-0 font-weight-bold text-primary">Update Record</h6>
+  </div>
+  <!-- Card Body -->
+  <div class="card-body">
+    <div class="container-fluid custom-container-2">
+      <div class="row">
+        <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <input type="text" class="form-control" disabled [(ngModel)]="studentData.sId" placeholder="Reg No.">
+        </div>
+
+        <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <input type="text"  class="form-control" [(ngModel)]="studentData.firstName" placeholder="first">
+        </div>  
+        
+        <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <input type="text" class="form-control" [(ngModel)]="studentData.lastName" placeholder="Last Name">
+        </div>
+    
+        <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <input type="text"  class="form-control" [(ngModel)]="studentData.studentClass" placeholder="cLASS Name">
+        </div>
+
+        <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <input type="text"  class="form-control" [(ngModel)]="studentData.subject" placeholder="SUBJECT">
+        </div>
+
+        <div class="form-group col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <input type="date"  class="form-control" [(ngModel)]="studentData.dob" placeholder="dOB">
+        </div>
+      </div> 
+      <div class="form-group row mt-2 ">
+      <!--Update Submit button-->
+        <button class="btn btn-primary w-25 float-left mx-auto btn-sm p-0 " (click)="updateStudent()">
+          Update
+        </button>
+      <!--Cancel back button-->
+      <button class="btn btn-outline-dark w-25 float-right mx-auto btn-sm" (click)="backToDisplay()">
+        Cancel
+      </button>
+      </div>   
+
+    </div>
+  </div>
+</div>
+
+
